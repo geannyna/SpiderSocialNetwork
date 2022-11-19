@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,21 +16,6 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-// Route::get('/post/{id}', function ($id) {
-//     $posts=[
-//         ['id'=>2,'title'=>'Primer post','content'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?'],
-//         ['id'=>5,'title'=>'Segundo post','content'=>' Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?'],
-//         ['id'=>8,'title'=>'Tercero post','content'=>'Numquam eaque corrupti quod aspernatur.Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?'],
-//         ['id'=>10,'title'=>'Cuarto post','content'=>'Ad fugit consequuntur pariatur excepturi esse voluptates qui molestiae debitis unde.Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?Ab tenetur quia veritatis repellat! Debitis eveniet quis quia rerum facilis voluptate eaque architecto aliquid?'],
-//     ];
-//     $postDetalle =null;
-//     foreach ($posts as $post){
-//         if($post['id'] == $id){
-//             $postDetalle= $post;
-//         }
-//     }
-//     return view('post',['posts'=>$ $postDetalle]);
-// })->name('post');
 
 Route::get('/home', function () {
     return view('home');
@@ -64,13 +50,10 @@ Route::get('/landing', function () {
     return redirect()->route ('home');
 });
 
-
-
-
-
 Route::get('/aboutus', function () {
     return view('aboutus');
 })->name ('aboutus');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
