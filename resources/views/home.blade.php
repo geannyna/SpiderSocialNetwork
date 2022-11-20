@@ -10,20 +10,21 @@
     </div>
     <div class="container-fluid d-flex justify-content-center">
    
-    <img class="home_img mt-5" src="{{ asset ('/img/network_home.png')}}">
+    {{-- <img class="home_img mt-5" src="{{ asset ('/img/network_home.png')}}"> --}}
    
     {{--  login de fortify--}}
-    <div class="card">
-        <div class="card-header">{{ __('Dashboard') }}</div>
+    <div class="card home_img mt-5">
+        <div class="card_header mt-5 ms-3 nav_letra text-center">{{ __('Bienvenido/a') }}</div>
 
-        <div class="card-body">
+        <div class="card-body ">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
                 </div>
             @endif
-
-            {{ __('You are logged in!') }}
+        <div class="nav_letra text-center">
+            {{ __('Ya estas conectado!') }}
+        </div>
         </div>
     </div>
 </div>

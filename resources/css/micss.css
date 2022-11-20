@@ -8,19 +8,20 @@ amarillo: #F1EB7D*/
 }
 .nav_letra{
 color: rgb(75, 5, 102);
-font-size: 1.3rem;
+font-size: 1.1rem;
 font-weight: bold;
 }
 .nav_spider{
   color: rgb(51, 3, 70);
   font-weight: bold;
 }
-.card-header {
+.card_header {
   background: transparent;
-  border: 2px solid #b881d6;
+  /* border: 2px solid #b881d6;
   border-top: #b575dc;
   border-left: #b575dc;
   border-right: #b575dc;
+  border-bottom: 50% transparent; */
  /* box-shadow: 38px 2px 14px 12px #d899f9 inset; */
 }
 .home_img{

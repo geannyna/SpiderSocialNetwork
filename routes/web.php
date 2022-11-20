@@ -15,11 +15,13 @@ use App\Http\Controllers\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
 Route::get('/home', function () {
     return view('home');
-})->name('home');
+});
 
 Route::get('/wall', [PostController::class, 'index'])->name ('wall');
 
