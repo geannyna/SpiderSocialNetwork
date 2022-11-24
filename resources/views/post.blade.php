@@ -18,9 +18,9 @@
 <div class="d-flex justify-content-center">
    <a class="btn card_btn me-3" href="{{ route ('editpost',['post' => $post]) }}">Modificar</a>
 
-   <form method="post" action="{{ url ('/deletepost')}}">
+   <form method="post" action="{{ route ('deletepost',['post' => $post])}}">
        @csrf
-       <input type="hidden" name="id" id="id" value="{{$post->id}}">
+       {{-- <input type="hidden" name="id" id="id" value="{{$post->id}}"> --}}
        <button type="submit" class="btn btn_delete me-3">Eliminar</button>
    </form>
 

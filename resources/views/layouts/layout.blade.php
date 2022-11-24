@@ -26,40 +26,43 @@
                       </li>
                     </ul>
                  <!-- Right Side Of Navbar -->
-                 <ul class="navbar-nav ms-auto">
-                  <!-- Authentication Links -->
-                  @guest
-                      @if (Route::has('login'))
-                          <li class="nav-item">
-                              <a class="nav-link nav_letra" href="{{ route('login') }}">Entrar</a>
-                          </li>
-                      @endif
+                     <!-- Right Side Of Navbar -->
+                     <ul class="navbar-nav ms-auto">
+                      <!-- Authentication Links -->
+                      @guest
+                          @if (Route::has('login'))
+                              <li class="nav-item">
+                                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                              </li>
+                          @endif
 
-                      @if (Route::has('register'))
-                          <li class="nav-item">
-                              <a class="nav-link nav_letra" href="{{ route('register') }}">{{ __('Registrarme')}}</a>
-                          </li>
-                      @endif
-                  @else
-                      <li class="nav-item dropdown">
-                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                              {{ Auth::user()->name }}
-                          </a>
-
-                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{ route('logout') }}"
-                                 onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
-                                 {{ __('Salir')}}
+                          @if (Route::has('register'))
+                              <li class="nav-item">
+                                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                              </li>
+                          @endif
+                      @else
+                          <li class="nav-item dropdown">
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                  {{ Auth::user()->name }}
                               </a>
 
-                              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                  @csrf
-                              </form>
-                          </div>
-                      </li>
-                  @endguest
-              </ul>
+                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                      {{ __('Logout') }}
+                                  </a>
+
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                      @csrf
+                                     
+                                  </form>
+                                   <button type="submit">Salir</button>
+                              </div>
+                          </li>
+                      @endguest
+                  </ul>
 
                   </div>
                 </div>
@@ -84,9 +87,9 @@
 
     <div class="container-fluid">
       <nav class="navbar navbar_footer navbar-expand-lg fixed-bottom">  
-        <p class="w-100 text-center fw-bold"> &copy; 2022, Spider Social Network 
+        <p class="w-100 text-center letra_footer"> &copy; 2022, Spider Social Network 
         <a href=""><img class="btn_up me-4" src="{{ asset ('/img/up.png')}}" alt=""></a>
-         </p>
+        </p>
         
       </nav>  
      

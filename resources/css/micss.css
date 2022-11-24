@@ -9,12 +9,17 @@ amarillo: #F1EB7D*/
 .nav_letra{
 color: rgb(75, 5, 102);
 font-size: 1.1rem;
-font-weight: bold;
+/* font-weight: bold; */
 }
 .nav_spider{
   color: rgb(51, 3, 70);
   font-weight: bold;
 }
+.wall_letra:hover{
+  font-weight:bolder;
+  color: rgb(75, 5, 102);
+  /* font-size: 1.5rem; */
+ }
 .card_header {
   background: transparent;
   /* border: 2px solid #b881d6;
@@ -26,8 +31,9 @@ font-weight: bold;
 }
 .home_img{
   margin-top: 20px;
-  width: 500px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
+  background-color: #eed1ff;
 }
 .about_img,.home_img{
   border: 10px double #b575dc;
@@ -35,9 +41,10 @@ font-weight: bold;
   transition: 0.5s;
  }
  .about_img:hover,.home_img:hover{
-   border: 5px dashed #b575dc;
+   border: 5px dashed #870bd4;
    border-radius: 30px;
    transition: 0.5s;
+   background-color: #cd7dff;
  }
 
 .contenido{
@@ -58,7 +65,11 @@ font-weight: bold;
 }
 .navbar_footer{
  background: linear-gradient(#d999fcb7,#3d0163);
- height: 50px;
+ height: 65px;
+}
+.letra_footer{
+  font-weight: bolder;
+  margin-bottom: -7px;
 }
 .mi_card{
   background-color: transparent;
@@ -89,10 +100,10 @@ font-weight: bold;
 .btn_delete{
   background-color: transparent;
   border-radius: 30%;
-  color: #844b0a;
+  color: #a1200a;
   font-weight: bold;
-  box-shadow: 14px 2px 14px 2px #d6872d inset;
-  text-shadow: 1px 1px 5px #da7605;
+  box-shadow: 14px 2px 14px 2px #fd4929 inset;
+  text-shadow: 1px 1px 5px #a22610;
 }
 .btn_buscar{
   color: #282828;

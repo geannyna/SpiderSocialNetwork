@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
+//use App\Http\Controllers\Auth;
 
 
 /*
@@ -19,19 +20,22 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 Route::get('/wall', [PostController::class, 'index'])->name ('wall');
-
 Route::get('/post/{post}', [PostController::class, 'show'])->name ('post');
-Route::get('/newpost', [PostController::class, 'create'])->name ('newpost');
+
+Route::group(['middleware' => 'auth'], function (){
+    Route::get('/newpost', [PostController::class, 'create'])->name ('newpost');
 Route::post('/savepost', [PostController::class, 'store'])->name ('savepost');
 
 Route::get('/editpost/{post}', [PostController::class, 'edit'])->name ('editpost');
 Route::post('/updatepost/{post}', [PostController::class, 'update'])->name ('updatepost');
-Route::post('/deletepost', [PostController::class, 'destroy']);
+Route::post('/deletepost/{post}', [PostController::class, 'destroy'])->name('deletepost');
+});
+
 
 Route::get('/contact',  [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store']);

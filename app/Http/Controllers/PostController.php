@@ -71,10 +71,10 @@ class PostController extends Controller
      }
 
      // borrar el post
-     public function delete(Request $request){
+     public function destroy(Post $post){
         
-        DB::table('posts')->delete($request->id);
-          return redirect()->route('wall')->with('success','El post se ha borrado correctamente.');
+        $post->deleteOrFail();
+          return redirect()->route('wall',['code'=>'200','message'=>'El post se ha borrado correctamente.']);
       }
 
 

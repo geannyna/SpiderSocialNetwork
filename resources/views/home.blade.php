@@ -13,7 +13,7 @@
     {{-- <img class="home_img mt-5" src="{{ asset ('/img/network_home.png')}}"> --}}
    
     {{--  login de fortify--}}
-    <div class="card home_img mt-5">
+    <div class="card home_img mt-4">
         <div class="card_header mt-5 ms-3 nav_letra text-center">{{ __('Bienvenido/a') }}</div>
 
         <div class="card-body ">
@@ -25,6 +25,11 @@
         <div class="nav_letra text-center">
             {{ __('Ya estas conectado!') }}
         </div>
+        <form id="logout-form" method="post" action="{{ route('logout') }}" class="d-none">
+            @csrf
+            
+        </form>
+        <a class="nav-link text-center wall_letra" href="{{route('logout')}} ">salir</a>
         </div>
     </div>
 </div>
