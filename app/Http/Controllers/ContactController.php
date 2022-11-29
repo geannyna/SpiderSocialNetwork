@@ -22,9 +22,9 @@ class ContactController extends Controller
 
         Mail::to('claudia.iacob@hotmail.com')->send (
             new ContactNotification(
-                $request->input('email'), 
-                $request->input('name'),
+                $request->input('name'), 
                 $request->input('description'),
+                $request->input('email'),
         ));
         
         return back()

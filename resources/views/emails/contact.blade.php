@@ -1,9 +1,9 @@
 
 
 <div class="marco">
-  {{-- <p> {{ $name }}</p> --}}
- <h4 class="text-center">Mensaje de: {{ $description }} </h4>
-<p> Ha comentado: <br>{{ $email }}</p>
+  <h1>Mensaje de {{ $name }}</h1>
+  <h4 class="text-center">Con email: {{ $email }} </h4>
+  <p> Ha comentado: <br>{{ $description }}</p>
 </div>
 {{-- con el componente cambiamos la forma en la que se ve el mensaje --}}
   <style>

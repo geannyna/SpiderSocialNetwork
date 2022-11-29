@@ -21,17 +21,17 @@ class PostController extends Controller
         $message = $request->message;
         //$posts = DB::table ('posts')->get();
         $posts = Post:: orderByDesc('id')->get();
-        return view('wall',compact('posts','code','message'));
+        return view('posts.index',compact('posts','code','message'));
     }
 
     public function show(Post $post){
         //$post = DB::table('posts')->find( $id);
-        return view ('post', compact ('post'));
+        return view ('posts.show', compact ('post'));
     }
 
     public function create(){
        
-        return view('newpost');
+        return view('posts.edit');
     }
 
     public function store(PostRequest $request){
@@ -45,13 +45,13 @@ class PostController extends Controller
         $post = Post::create ($request->validated());
         $post->img = $urlweb;
         $post->saveOrFail();
-        return redirect()->route('wall',['code'=>'200','message'=>'Se ha creado el nuevo post.']);
+        return redirect()->route('posts.index',['code'=>'200','message'=>'Se ha creado el nuevo post.']);
     }
 
     public function edit(Post $post){
        
         // $post = DB::table('posts')->find( $post);
-        return view ('updatepost', compact ('post'));
+        return view ('posts.edit', compact ('post'));
     }
 
     public function update(PostRequest $request,Post $post){
@@ -67,14 +67,14 @@ class PostController extends Controller
         $post->img = $urlweb;
         $post->saveOrFail();
      
-         return redirect()->route('wall',['code'=>'200','message'=>'El post se ha actualizado correctamente.']);
+         return redirect()->route('posts.index',['code'=>'200','message'=>'El post se ha actualizado correctamente.']);
      }
 
      // borrar el post
      public function destroy(Post $post){
         
         $post->deleteOrFail();
-          return redirect()->route('wall',['code'=>'200','message'=>'El post se ha borrado correctamente.']);
+          return redirect()->route('posts.index',['code'=>'200','message'=>'El post se ha borrado correctamente.']);
       }
 
 

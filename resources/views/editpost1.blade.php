@@ -13,7 +13,7 @@
   <x-editcard />
     <div class="d-flex justify-content-center mt-4">
       <button type="submit" class="btn card_btn me-4">Guardar</button>
-      <a class="btn btn_back" href="{{ route ('wall') }}">Volver</a>
+      <a class="btn btn_back" href="{{ route ('posts.index') }}">Volver</a>
     </div>
 
 </form>

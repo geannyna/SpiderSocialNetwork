@@ -12,17 +12,20 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item nav_letra text-light">
-                        <a class="nav-link nav_letra" aria-current="page" href="{{ route ('wall')}}">Muro</a>
+                      <li class="nav-item">
+                        <a class="nav-link mi_letra" href="{{ route ('posts.index')}}">Muro</a> 
+                     </li>
+                     <li class="nav-item">
+                      <a class="nav-link mi_letra" href="{{ route ('groups.index')}}">Grupos</a> 
+                   </li>
+                      <li class="nav-item">
+                         <a class="nav-link mi_letra" href="{{ route ('people')}}">Personas</a> 
                       </li>
                       <li class="nav-item">
-                         <a class="nav-link nav_letra" href="{{ route ('people')}}">Personas</a> 
-                      </li>
-                      <li class="nav-item">
-                       <a class="nav-link nav_letra" href="{{ route ('contact')}}">Contacto</a>
+                       <a class="nav-link mi_letra" href="{{ route ('contact')}}">Contacto</a>
                       </li>
                       <li class="nav-item" >
-                        <a class="nav-link nav_letra" href="{{ route ('aboutus')}}">Acerca de</a>
+                        <a class="nav-link mi_letra" href="{{ route ('aboutus')}}">Acerca de</a>
                       </li>
                     </ul>
                  <!-- Right Side Of Navbar -->
@@ -32,23 +35,23 @@
                       @guest
                           @if (Route::has('login'))
                               <li class="nav-item">
-                                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                  <a class="nav-link mi_letra" href="{{ route('login') }}">{{ __('Login') }}</a>
                               </li>
                           @endif
 
                           @if (Route::has('register'))
                               <li class="nav-item">
-                                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                  <a class="nav-link mi_letra" href="{{ route('register') }}">{{ __('Register') }}</a>
                               </li>
                           @endif
                       @else
                           <li class="nav-item dropdown">
-                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle mi_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   {{ Auth::user()->name }}
                               </a>
 
                               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="{{ route('logout') }}"
+                                  <a class="dropdown-item mi_letra" href="{{ route('logout') }}"
                                      onclick="event.preventDefault();
                                                    document.getElementById('logout-form').submit();">
                                       {{ __('Logout') }}
@@ -58,7 +61,6 @@
                                       @csrf
                                      
                                   </form>
-                                   <button type="submit">Salir</button>
                               </div>
                           </li>
                       @endguest
@@ -87,10 +89,10 @@
 
     <div class="container-fluid">
       <nav class="navbar navbar_footer navbar-expand-lg fixed-bottom">  
-        <p class="w-100 text-center letra_footer"> &copy; 2022, Spider Social Network 
+        <p class="w-100 text-center mi_letra"> &copy; 2022, Spider Social Network 
         <a href=""><img class="btn_up me-4" src="{{ asset ('/img/up.png')}}" alt=""></a>
         </p>
-        
+      
       </nav>  
      
     </div>

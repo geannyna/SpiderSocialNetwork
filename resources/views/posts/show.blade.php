@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="text-center">
-    <h1 class="mt-5">@yield('pagetitle')</h1>
+    <h1 class="pagetitle mt-5">@yield('pagetitle')</h1>
 </div>
 
 <x-card title="{{$post->title}}"
@@ -16,19 +16,20 @@
 
    <br>
 <div class="d-flex justify-content-center">
-   <a class="btn card_btn me-3" href="{{ route ('editpost',['post' => $post]) }}">Modificar</a>
+   <a class="btn card_btn me-3" href="{{ route ('posts.edit',['post' => $post]) }}">Modificar</a>
 
-   <form method="post" action="{{ route ('deletepost',['post' => $post])}}">
+   <form method="post" action="{{ route ('posts.destroy',['post' => $post])}}">
        @csrf
+       @method('delete')
        {{-- <input type="hidden" name="id" id="id" value="{{$post->id}}"> --}}
        <button type="submit" class="btn btn_delete me-3">Eliminar</button>
    </form>
 
-   <a class="btn btn_back" href="{{ route ('wall') }}">Volver</a>
+   <a class="btn btn_back" href="{{ route ('posts.index') }}">Volver</a>
 </div>
 
 
-@yield('footer') 
+{{-- @yield('footer')  --}}
 
 
 @endsection

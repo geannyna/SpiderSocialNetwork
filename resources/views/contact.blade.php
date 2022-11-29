@@ -13,16 +13,16 @@
     <h1 class="pagetitle mt-0">@yield('pagetitle')</h1>
     </div>
     <div class="mb-3">
-      <label for="name" class="form-label" >Tu nombre</label>
+      <label for="name" class="form-label nav_letra" >Nombre</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre" required>
       
     </div>
     <div class="mb-3">
-      <label for="email" class="form-label">Email address</label>
+      <label for="email" class="form-label nav_letra">Email</label>
       <input type="email" class="form-control" id="email" name="email" placeholder="name@email.com" required> 
     </div>
     <div class="mb-3">
-      <label for="description" class="form-label">Tu consulta</label>
+      <label for="description" class="form-label nav_letra">Mensaje</label>
       <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
     </div>
     <div class="d-flex justify-content-center">

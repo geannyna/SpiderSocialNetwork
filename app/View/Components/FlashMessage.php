@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class FlashMessage extends Component
 {
-    public $code;
+    public $code=200;
     public $type;
     public $message;
     public $timeout;
@@ -16,8 +16,8 @@ class FlashMessage extends Component
         $this->code = $code;
         $this->message = $message;
         if($code<=200){
-            $this->type="success border-success bg-light";
-            $this->timeout=5000;
+            $this->type="flashMsg";
+            $this->timeout=50000;
         }else if($code < 400){
             $this->type = "warning border-warning";
             $this->timeout=10000;
