@@ -16,7 +16,7 @@
             @if (isset(Auth::user()->name))
             <div class="nav_letra text-center">
                 {{ __('Hola ') }} {{ Auth::user()->name }}
-                 <p>   {{ __('Ya estas conectado!') }}</p>
+                 <p>   {{ __('Ya estamos conectados!') }}</p>
                 </div>
                 @else
                 <img class="home_img" src="{{ asset ('/img/network.jpg')}}">

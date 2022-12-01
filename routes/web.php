@@ -5,7 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupController;
-
+use App\Http\Controllers\PersonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,18 +36,17 @@ Route::group(['middleware' => 'auth'], function (){
     Route::put('/post/{post}', [PostController::class, 'update'])->name ('posts.update');
 
     Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+    Route::resource('/groups',GroupController::class)->parameters('groups');
 });
 
-Route::resource('/groups',GroupController::class)->parameters('groups');
+
+
+
+Route::get('/people', [PersonController::class, 'index'])->name ('people.index');
+Route::get('/person/{person}', [PersonController::class, 'show'])->name ('people.show');
+
 Route::get('/contact',  [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store']);
-
-
-Route::get('/people', function () {
-    return view('people');
-})->name('people');
-
-
 
 Route::get('/aboutus', function () {
     return view('aboutus');

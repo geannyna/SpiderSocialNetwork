@@ -19,7 +19,7 @@
                       <a class="nav-link mi_letra" href="{{ route ('groups.index')}}">Grupos</a> 
                    </li>
                       <li class="nav-item">
-                         <a class="nav-link mi_letra" href="{{ route ('people')}}">Personas</a> 
+                         <a class="nav-link mi_letra" href="{{ route ('people.index')}}">Personas</a> 
                       </li>
                       <li class="nav-item">
                        <a class="nav-link mi_letra" href="{{ route ('contact')}}">Contacto</a>
