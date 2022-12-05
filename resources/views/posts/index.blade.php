@@ -1,6 +1,6 @@
 @extends('layouts.layout') 
 @section('title', 'Spider Social Network') 
-@section('pagetitle','Muro') 
+@section('pagetitle','Posts') 
 
 @section('content')
 <div class="container-fluid">
@@ -25,9 +25,9 @@
 <br>
  
 @auth
-     <div class="container-fluid">
+    
     <p class="text-center">
-      <a class="btn card_btn" href="{{ route ('posts.create') }}">Crear nuevo post</a></p>
+      <a class="btn nuevo_btn" href="{{ route ('posts.create') }}">Crear nuevo post</a></p>
    </div>
    @else
     <div class="d-flex justify-content-center mt-4 nav_letra">
@@ -36,7 +36,7 @@
     <div class="d-flex justify-content-center mt-4 nav_letra">
        Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link ms-1 wall_letra" href="{{route('register')}} ">registrate.</a>
         
-    </div>
+   
 @endauth
 
 

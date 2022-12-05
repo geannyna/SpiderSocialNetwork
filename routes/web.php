@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth'], function (){
 });
 
 
-
+Route::get('/group/{title}',[GroupController::class,'showByName']);
 
 Route::get('/people', [PersonController::class, 'index'])->name ('people.index');
 Route::get('/person/{person}', [PersonController::class, 'show'])->name ('people.show');

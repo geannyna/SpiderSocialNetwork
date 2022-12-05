@@ -53,6 +53,17 @@ class GroupController extends Controller
         return view('groups.show',compact('group'));
     }
 
+    // show by name ruta friendly
+    public function showByName($title){
+        $groups = Group::where(['title' => $title])->get();
+        if (sizeof($groups) == 1) {
+            $group = $groups->first();
+            return view('groups.show',compact('group'));
+        } else {
+          return view('groups.index',compact('groups')); 
+        }
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

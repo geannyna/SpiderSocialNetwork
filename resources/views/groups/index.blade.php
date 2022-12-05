@@ -26,7 +26,7 @@
 @auth
      <div class="container-fluid">
     <p class="text-center">
-      <a class="btn card_btn" href="{{ route ('groups.create') }}">Crear nuevo grupo</a></p>
+      <a class="btn nuevo_btn" href="{{ route ('groups.create') }}">Crear nuevo grupo</a></p>
    </div>
    @else
     <div class="d-flex justify-content-center mt-4 nav_letra">
