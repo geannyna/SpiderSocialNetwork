@@ -3,7 +3,7 @@
     <div class="col d-flex justify-content-center">
       <div class="card mi_card mt-3">
         @if ($img != '')
-          <img src="{{$img}}" class="card-img-top card_img " alt="{{ $title }}">
+          <img src="{{$img}}" class="card-img-top card_img" alt="{{ $title }}">
         @endif {{-- si no hay imagen no aparece nada --}}
 
         <div class="card-body d-flex row">

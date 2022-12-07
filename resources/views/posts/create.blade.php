@@ -5,7 +5,7 @@
 @section('content')
 <br>
 
-<form enctype="multipart/form-data" method="post" action="{{ route ('savepost') }}">
+<form enctype="multipart/form-data" method="post" action="{{ route ('posts.store') }}">
   {{-- form type="text/html" --este ya no sirve cuando hay que mandar una imagen a la BD --}}
   @csrf
 
@@ -33,6 +33,10 @@
             </div>
         </div>
       </div> 
+      @auth
+        <input type="text" name="user_id" value=" {{ Auth::user()->id }} ">
+      @endauth 
+      {{-- ese campo tiene que estar dentro del form --}}
   </div>
 
     <div class="d-flex justify-content-center mt-4">

@@ -12,7 +12,7 @@
   <input type="hidden" id="id" name="id" value="{{ $post->id}}">
   {{-- creamos ese campo oculto para pasar el id al controlador y poder modificar info --}}
   <div class="container-fluid d-flex justify-content-center">
-    <div class="col col-lg-12 w-75 d-flex">
+    <div class="col col-lg-12 d-flex">
         <div class="card card-body row d-flex mod_card mt-5">
           <p class="card-title">
             <h3 class="form-label text-center pagetitle mt-0">Modificar post</h3></p>
@@ -26,6 +26,10 @@
         </div>
       </div> 
   </div>
+
+  @auth
+  <input type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
+@endauth
 
     <div class="d-flex justify-content-center mt-4">
      

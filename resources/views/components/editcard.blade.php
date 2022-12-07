@@ -1,10 +1,10 @@
 @props(['text','auxiliar'])
 
-<div class="container-fluid d-flex justify-content-center w-75">
+<div class="container-fluid d-flex justify-content-center">
   <div class="col d-flex">
       <div class="card mod_card card-body d-flex row">
         <p class="card-title">
-          <h3 class="form-label text-center w-75 ps-5 ms-3">Nuevo Post </h3>
+          <h3 class="form-label text-center ps-5 ms-3">Nuevo Post </h3>
         </p>
 
           <p><input type="text" name="title" id="title" value="{{ old ('title')}}" placeholder="Nombre del post" class="form-control @error('title')

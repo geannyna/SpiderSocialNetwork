@@ -29,7 +29,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   /* font-size: 1.5rem; */
  }
 .card_header {
-  background: rgba(255, 255, 255, 0.753);
+  background: transparent;
   /* border: 2px solid #b881d6;
   border-top: #b575dc;
   border-left: #b575dc;
@@ -63,7 +63,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92),url('/public/img/n3.jpg');  
   background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 ),url('/public/img/n3.jpg');
-  background-repeat: no-repeat;
+ 
   background-size: cover;
   }
 .card_img{
@@ -73,7 +73,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   border: 3px dashed #9e07f0;
   border-left: transparent;
   border-top: transparent;
- 
+ margin-left: 20px;
 }
 .navbar_footer{
  background: linear-gradient(#cb20ff31,#3d0163);
@@ -140,7 +140,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   float: right;
 }
 .mi_form{
-  width: 60%;
+  width: 40%;
   height: auto;
   border: 20px solid #d9a8f8;
   border-radius: 80px;
@@ -152,7 +152,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
 }
 
 .mod_card{
-  width: 50px;
+  width: 40%;
   height: auto;
   border: 10px groove #b64af9;
   border-radius: 80px;

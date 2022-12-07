@@ -29,7 +29,7 @@ Route::get('/posts', [PostController::class, 'index'])->name ('posts.index');
 Route::get('/post/{post}', [PostController::class, 'show'])->name ('posts.show');
 
 Route::group(['middleware' => 'auth'], function (){
-    Route::get('/post/create', [PostController::class, 'create'])->name ('posts.create');
+    Route::get('/post', [PostController::class, 'create'])->name ('posts.create');
     Route::post('/post', [PostController::class, 'store'])->name ('posts.store');
 
     Route::get('/post/{post}/edit', [PostController::class, 'edit'])->name ('posts.edit');

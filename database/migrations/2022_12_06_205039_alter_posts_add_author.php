@@ -21,7 +21,7 @@ return new class extends Migration
                   ->nullable(true)
                   ->constrained('users')
                   ->cascadeOnUpdate()
-                  ->nullOnDelete();
+                  ->cascadeOnDelete();
         });
     }
 

@@ -31,7 +31,7 @@ class PostController extends Controller
 
     public function create(){
        
-        return view('posts.edit');
+        return view('posts.create');
     }
 
     public function store(PostRequest $request){
@@ -44,8 +44,9 @@ class PostController extends Controller
 
         $post = Post::create ($request->validated());
         $post->img = $urlweb;
+       // dd($post);
         $post->saveOrFail();
-        return redirect()->route('posts.index',['code'=>'200','message'=>'Se ha creado el nuevo post.']);
+        return redirect()->route('posts.index',['code'=>'200','message'=>'Se ha creado correctamente.']);
     }
 
     public function edit(Post $post){
@@ -67,14 +68,14 @@ class PostController extends Controller
         $post->img = $urlweb;
         $post->saveOrFail();
      
-         return redirect()->route('posts.index',['code'=>'200','message'=>'El post se ha actualizado correctamente.']);
+         return redirect()->route('posts.index',['code'=>'200','message'=>'Actualizado correctamente.']);
      }
 
      // borrar el post
      public function destroy(Post $post){
         
         $post->deleteOrFail();
-          return redirect()->route('posts.index',['code'=>'200','message'=>'El post se ha borrado correctamente.']);
+          return redirect()->route('posts.index',['code'=>'200','message'=>'Se ha borrado correctamente.']);
       }
 
 

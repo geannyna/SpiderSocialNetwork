@@ -25,7 +25,8 @@ class PostRequest extends FormRequest
     {
         return [
             'title' => 'required|min:5',
-            'content' => 'required|min:10'
+            'content' => 'required|min:10',
+            'user_id' => 'required'
              //no poner coma despues del ultimo campo en un array, max:10
         ];
     }
