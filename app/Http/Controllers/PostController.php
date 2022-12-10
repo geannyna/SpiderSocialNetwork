@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\User;
+use App\Models\Group;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\PostRequest;
-use App\Models\Post;
-
+use PHPUnit\TextUI\XmlConfiguration\Groups;
 
 class PostController extends Controller
 {
@@ -24,14 +26,22 @@ class PostController extends Controller
         return view('posts.index',compact('posts','code','message'));
     }
 
+    public function filterByUser(User $user,Request $request){
+        $code = $request->code;
+        $message = $request->message;
+        $posts = Post::whereBelongsTo($user)->get();
+        return view('posts.index',compact('posts','code','message'));
+    }
     public function show(Post $post){
         //$post = DB::table('posts')->find( $id);
+         //dd($post);
         return view ('posts.show', compact ('post'));
     }
 
     public function create(){
-       
-        return view('posts.create');
+       //aqui hacemos lo del nombre de quien a creado el grupo
+       $groups = Group::orderBy('title')->get();
+        return view('posts.create',compact('groups'));
     }
 
     public function store(PostRequest $request){

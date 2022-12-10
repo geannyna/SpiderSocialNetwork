@@ -4,10 +4,10 @@
 
 @section('content')
 
-<div class="container-fluid mi_form">
+<div class="container-fluid mi_form w-75">
   <div class="row d-flex" >
- <div class="col-12 col-lg-12 w-100">
-  <form action="" method="post" class="w-100">
+ <div class="col-12 col-lg-12">
+  <form action="" method="post">
       @csrf   {{--  componente de seguridad cuando tenemos post, hay que ponerlo siempre para el post --}}
   <div class="text-center">
     <h1 class="pagetitle mt-0">@yield('pagetitle')</h1>

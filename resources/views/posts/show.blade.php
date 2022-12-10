@@ -10,7 +10,8 @@
 
 <x-card title="{{$post->title}}"
     content="{{$post->content}}"
-    img="{{$post->img}}" text>
+    img="{{$post->img}}"
+    author="{{ $post->user->name }}">
 </x-card>
    {{-- (habia text al final)--}}
 

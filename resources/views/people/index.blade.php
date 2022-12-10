@@ -3,12 +3,10 @@
 @section('pagetitle','Personas') 
 
 @section('content')
-<div class="container-fluid">
     
 <div class="text-center">
     <h1 class="pagetitle mt-5">@yield('pagetitle')</h1>
 </div>
-
 
     <div class="row-cols-1 g-4 pt-5">
         @foreach ($people as $person )
@@ -20,5 +18,5 @@
 
         @endforeach
     </div>
-</div>
+
 <br>

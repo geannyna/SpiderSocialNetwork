@@ -3,15 +3,15 @@
 @section('pagetitle','Welcome to Spider Network') 
 
 @section('content')
-<div class="container-fluid container-md row d-flex">
+<div class="row d-flex">
     
 <div class="text-center">
     <h1 class="pagetitle">@yield('pagetitle')</h1>
-    </div>
-    <div class="container-fluid d-flex justify-content-center">
-           
-    {{--  login de fortify--}}
-    <div class="card home_img mt-4">
+</div>
+
+<div class="d-flex justify-content-center">
+   {{--  login de fortify--}}
+    <div class="card home_card mt-4">
         <div class="mt-5 nav_letra text-center">
             @if (isset(Auth::user()->name))
             <div class="nav_letra text-center">

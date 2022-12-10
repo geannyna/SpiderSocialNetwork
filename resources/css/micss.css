@@ -13,6 +13,9 @@ font-size: 1.2rem;
 font-weight: bold;
 text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px rgb(156, 3, 227);
 }
+.nav_letra:hover{
+  font-size: 1.5rem;
+}
 .mi_letra{
   font-size: 1.1rem;
   color: rgb(240, 204, 254);
@@ -37,18 +40,18 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   border-bottom: 50% transparent; */
  /* box-shadow: 38px 2px 14px 12px #d899f9 inset; */
 }
-.home_img{
-  margin-top: 10px;
-  width: 50%;
-  height: 100%;
-  background-color: #eed1ff;
+.home_card{
+  background-color: transparent;
+  border: transparent;
+  width: 30%;
+  height: 30%;
 }
-.about_img,.home_img{
+.home_img{
   border: 10px double #b575dc;
   border-radius: 50%;
   transition: 0.5s;
  }
- .about_img:hover,.home_img:hover{
+ .home_img:hover{
    border: 5px dashed #870bd4;
    border-radius: 30px;
    transition: 0.5s;
@@ -58,13 +61,12 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
 .contenido{
 
   background: transparent; 
-  width: auto;
   padding-top: 10px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92),url('/public/img/n3.jpg');  
-  background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 ),url('/public/img/n3.jpg');
- 
-  background-size: cover;
+  background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92),url('/public/img/ng1.png');  
+  background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 ),url('/public/img/ng1.png');
+  background-size: auto;
+  
   }
 .card_img{
   border-radius: 25px;
@@ -85,7 +87,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   margin-bottom: -7px;
 }
 .mi_card{
-  background-color: rgba(255, 255, 255, 0.753);
+  background-color: rgba(255, 255, 255, 0.368);
   height: auto;
   padding-top: 28px;
   padding-left: 10px;
@@ -93,7 +95,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   border: 3px double #ab23ff;
   border-left:transparent;
   border-right: transparent;
-  width: 40%;
+  width: 500px;
 }
 .nuevo_btn{
   background-color: transparent;

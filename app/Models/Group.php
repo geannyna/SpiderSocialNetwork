@@ -10,5 +10,9 @@ class Group extends Model
     use HasFactory;
     protected $fillable =['title','description'];
 
+    public function posts() 
+    {
+        return $this->hasMany(Post::class);
+    }
     // se puede poner o el de arriba o ese: protected guarded = ['']; 
 }

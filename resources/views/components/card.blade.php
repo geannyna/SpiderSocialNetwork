@@ -9,13 +9,21 @@
         <div class="card-body d-flex row">
           <h5 class="card-title text-center">{{ $title }}</h5>
           <p class="card-text">{{ $content}}</p>
+          
+        @isset($author)
+        <p class="card-text">Creado por: {{ $author }}</p>
+        @endisset     
+         
+       {{--  @isset($author)
+        <p class="card-text">Creado por: {{ $author }}</p>
+        @endisset 
+         no funciona el isset para poner el autor de la card --}}
         </div>  
-          {{-- @isset($link) 
-             <p class="text-center mt-auto"><a class="btn card_btn" href="{{ $link }}">Ver más</a></p>
-          @endisset  --}}
-          @if ($link != '')
+          
+        @if ($link != '')
           <p class="text-center mt-auto"><a class="btn card_btn" href="{{ $link }}">Ver más</a></p>
-     @endif
+        @endif
+    
       </div>
    
   </div>

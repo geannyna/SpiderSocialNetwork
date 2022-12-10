@@ -12,10 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    public function posts() 
-    {
-        return $this->hasMany(Post::class);
-    }
+   
     /**
      * The attributes that are mass assignable.
      *
@@ -27,6 +24,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function posts() 
+    {
+        return $this->hasMany(Post::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

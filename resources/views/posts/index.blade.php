@@ -16,7 +16,8 @@
             <x-card title="{{$post->title}}"
                 content="{{$post->content}}"
                 img="{{$post->img}}"
-                link="{{ route ('posts.show', ['post'=> $post->id]) }}">
+                link="{{ route ('posts.show', ['post'=> $post->id]) }}"
+                author="{{ $post->user->name }}">
             </x-card>
 
         @endforeach

@@ -17,6 +17,15 @@
           <p class="card-title">
             <h3 class="form-label text-center">Nuevo Post</h3></p>
           <p><input type="text" name="title" id="title" placeholder="Nombre del post" value="{{ old('title') }}" class="form-control" required></p>
+
+          {{-- grupo al que pertenece --}}
+          <label for="group_id" class="form-label">Grupo en el que se piblicará</label>
+          <select class="form-control" name="group_id" id="group_id" placeholder="Grupo del post" value="{{ old('group_id') }}">
+            @foreach ($groups as $group)
+              <option value="{{$group_id }}">{{$group_title}}</option>
+            @endforeach
+            </select>
+
           <p class="card-text">
              <textarea class="form-control" id="content" name="content" rows="3"  placeholder="Detalles ..." required>{{ old('content') }}</textarea></p>
             <div class="mb-3">
@@ -34,7 +43,7 @@
         </div>
       </div> 
       @auth
-        <input type="text" name="user_id" value=" {{ Auth::user()->id }} ">
+        <input type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
       @endauth 
       {{-- ese campo tiene que estar dentro del form --}}
   </div>
