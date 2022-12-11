@@ -31,6 +31,23 @@
    </form>
 
    <a class="btn btn_back" href="{{ route ('groups.index') }}">Volver</a>
+  
+</div>
+<div>
+     <p class="text-center mt-5 mi_letra">Posts del mismo grupo</p>
+</div>
+<div class="d-flex justify-content-center">
+    <table class="table table-striped table-hover w-25">
+        
+       @foreach ( $group->posts as $post)
+          <tr class="table-active">
+            <td>
+                <a href="{{ route('posts.show',$post)}}">{{ $post->title }}</a>
+            </td>
+          </tr>  
+       @endforeach
+       
+      </table>
 </div>
 
 @endsection

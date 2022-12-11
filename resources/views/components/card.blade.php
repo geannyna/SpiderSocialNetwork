@@ -10,10 +10,13 @@
           <h5 class="card-title text-center">{{ $title }}</h5>
           <p class="card-text">{{ $content}}</p>
           
-        @isset($author)
+          @if ( isset ($author) && ($author != ''))
         <p class="card-text">Creado por: {{ $author }}</p>
-        @endisset     
-         
+        @endif  
+
+        @isset($group)
+        <p class="card-text">Publicado en: {{ $group }}</p>
+        @endisset 
        {{--  @isset($author)
         <p class="card-text">Creado por: {{ $author }}</p>
         @endisset 

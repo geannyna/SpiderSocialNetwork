@@ -19,13 +19,14 @@
           <p><input type="text" name="title" id="title" placeholder="Nombre del post" value="{{ old('title') }}" class="form-control" required></p>
 
           {{-- grupo al que pertenece --}}
-          <label for="group_id" class="form-label">Grupo en el que se piblicará</label>
-          <select class="form-control" name="group_id" id="group_id" placeholder="Grupo del post" value="{{ old('group_id') }}">
-            @foreach ($groups as $group)
-              <option value="{{$group_id }}">{{$group_title}}</option>
-            @endforeach
-            </select>
-
+          <div class="mb-3">
+            <label for="group_id" class="form-label">Grupo en el que se piblicará</label>
+              <select class="form-control" name="group_id" id="group_id" value="{{ old('group_id') }}" required>
+                @foreach ($groups as $group)
+                  <option value="{{$group->id }}">{{$group->title}}</option>
+                @endforeach
+              </select>
+          </div>
           <p class="card-text">
              <textarea class="form-control" id="content" name="content" rows="3"  placeholder="Detalles ..." required>{{ old('content') }}</textarea></p>
             <div class="mb-3">
