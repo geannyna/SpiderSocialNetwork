@@ -16,15 +16,16 @@
 
         @isset($group)
         <p class="card-text">Publicado en: {{ $group }}</p>
-        @endisset 
-       {{--  @isset($author)
+        @endisset
+
+      {{--  @isset($author)
         <p class="card-text">Creado por: {{ $author }}</p>
         @endisset 
-         no funciona el isset para poner el autor de la card --}}
+          no funciona el isset para poner el autor de la card --}}
         </div>  
           
         @if ($link != '')
-          <p class="text-center mt-auto"><a class="btn card_btn" href="{{ $link }}">Ver más</a></p>
+          <p class="text-center mt-auto"><a class="btn card_btn" href="{{ $link }}">{{((isset($linkTxt))? $linkTxt : "Ver más")}}</a></p>
         @endif
     
       </div>

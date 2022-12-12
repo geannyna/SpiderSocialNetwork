@@ -9,7 +9,9 @@
 </div>
 
 <x-card title="{{$person->name}}"
-    content="{{$person->email}}">
+    content="{{$person->email}}"
+    link="{{ route ('posts.filterByUser',$person)}}" 
+    linkTxt="Ver posts">
 </x-card>
    {{-- (habia text al final)--}}
 

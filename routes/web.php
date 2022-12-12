@@ -41,7 +41,7 @@ Route::group(['middleware' => 'auth'], function (){
 
 Route::get('/posts/{user}',[PostController::class,'filterByUser'])->name('posts.filterByUser');
 
-// buscar http://127.0.0.1:8000/group/php
+// para ver por nombre buscar http://127.0.0.1:8000/group/php
 Route::get('/group/{name}',[GroupController::class,'showByName']);
 
 Route::get('/people', [PersonController::class, 'index'])->name ('people.index');
