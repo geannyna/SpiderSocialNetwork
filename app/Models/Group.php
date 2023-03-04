@@ -14,5 +14,9 @@ class Group extends Model
     {
         return $this->hasMany(Post::class);
     }
-    // se puede poner o el de arriba o ese: protected guarded = ['']; 
+    // se puede poner o el de arriba o ese: protected guarded = [''];
+    public function users() 
+    {
+        return $this->belongsToMany(User::class);
+    } 
 }

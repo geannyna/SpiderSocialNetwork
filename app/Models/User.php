@@ -28,6 +28,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+    public function groups() 
+    {
+        return $this->belongsToMany(Group::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

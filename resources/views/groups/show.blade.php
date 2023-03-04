@@ -37,12 +37,21 @@
      <p class="text-center mt-5 mi_letra">Posts del mismo grupo</p>
 </div>
 <div class="d-flex justify-content-center">
-    <table class="table table-striped table-hover w-25">
+    <table class="table table-striped table-hover w-75">
         
        @foreach ( $group->posts as $post)
           <tr class="table-active">
             <td>
                 <a href="{{ route('posts.show',$post)}}">{{ $post->title }}</a>
+            </td>
+            <td>
+                <p>{{ $post->content }}</p>
+            </td>
+            <td>
+                <a href="{{ route('posts.show',$post)}}"><img src="{{ asset('img/edit.png') }}" alt=""></a>
+            </td>
+            <td>
+                <a href="{{ route('posts.show',$post)}}"><img src="{{ asset('img/recycle-bin.png') }}" alt=""></a>
             </td>
           </tr>  
        @endforeach

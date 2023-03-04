@@ -19,11 +19,24 @@
 <div class="d-flex justify-content-center">
   <script>
       function confirmarBorrar(){
-        return (confirm('¿Estas seguro que quieres borrar el grupo?'));
+        return (confirm('¿Estas seguro que quieres borrar persona?'));
       }
   </script>
+  <div class="d-flex justify-content-center">
+    {{-- @if (Auth::user()->id == $post->user->id) --}}
+        
+   
+   <a class="btn card_btn me-3" href="{{ route ('people.edit',['person' => $person]) }}">Modificar</a>
 
+   <form method="post" action="{{ route ('people.destroy',['person' => $person])}}" onsubmit="confirmarBorrar()">
+       @csrf
+       @method('delete')
+       {{-- <input type="hidden" name="id" id="id" value="{{$post->id}}"> --}}
+       <button type="submit" class="btn btn_delete me-3">Eliminar</button>
+   </form>
+ {{-- @endif --}}
    <a class="btn btn_back" href="{{ route ('people.index') }}">Volver</a>
+</div>
 </div>
 
 @endsection

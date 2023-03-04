@@ -10,7 +10,8 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $people = User::orderBy('name')->get();
+        // $people = User::orderBy('name')->get(); -- ordenado por nombre, por id aparece el ultimo
+        $people = User::orderByDesc('id')->get();
         return view('people.index',compact('people'));
        }
        public function show(User $person)
@@ -29,5 +30,12 @@ class PersonController extends Controller
            $person->saveOrFail();
            return redirect()->route('people.index');
        }
-
+       public function edit(User $person)
+       {
+           return view('people.edit',compact('person'));
+       }
+       public function destroy(User $person)
+       {
+         return view('people.show',compact('person'));
+       }
 }

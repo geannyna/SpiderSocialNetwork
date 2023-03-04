@@ -2,10 +2,16 @@
 /* -- oscuro:#8105ce,mas: #3d0163
 claro: #d999fcb7
 amarillo: #F1EB7D*/
-
+*{
+  padding:0px;
+  margin:0px;
+}
 .navbar_head{
   background: linear-gradient(#3d0163,#c861ff33);
-  height: 50px;
+  height: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
 }
 .nav_letra{
 color: rgb(81, 1, 112);
@@ -59,23 +65,23 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
  }
 
 .contenido{
-
+  
   background: transparent; 
   padding-top: 10px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92),url('/public/img/t4.jpg');  
-  background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 ),url('/public/img/t4.jpg');
-  background-size: contain;
+  background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92);  
+  background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 );
+  background-size: cover;
   
   }
 .card_img{
   border-radius: 25px;
   height: 50%;
   width: 40%;
-  border: 3px dashed #9e07f0;
+  box-shadow: 0px 0px 10px 0px #9e07f0;
   border-left: transparent;
   border-top: transparent;
- margin-left: 20px;
+  margin-left: 20px;
 }
 .navbar_footer{
  background: linear-gradient(#cb20ff31,#3d0163);

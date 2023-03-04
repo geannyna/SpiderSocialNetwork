@@ -1,11 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,15 @@ Route::get('/group/{name}',[GroupController::class,'showByName']);
 
 Route::get('/people', [PersonController::class, 'index'])->name ('people.index');
 Route::get('/person/{person}', [PersonController::class, 'show'])->name ('people.show');
+
+Route::get('/persons/create', [PersonController::class, 'create'])->name ('people.create');
+//modificado person por persons --- por conflicto
+Route::post('/person', [PersonController::class, 'store'])->name ('people.store');
+
+Route::get('/person/{person}/edit', [PersonController::class, 'edit'])->name ('people.edit');
+Route::put('/post/{post}', [PostController::class, 'update'])->name ('posts.update');
+
+Route::delete('/person/{person}', [PersonController::class, 'destroy'])->name('people.destroy');
 
 Route::get('/contact',  [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store']);

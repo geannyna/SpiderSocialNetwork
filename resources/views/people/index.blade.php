@@ -17,6 +17,8 @@
             </x-card>
 
         @endforeach
+        <p class="text-center">
+        <a class="btn nuevo_btn mt-3" href="{{ route ('people.create') }}">Crear nueva persona</a></p>
     </div>
 
 <br>
