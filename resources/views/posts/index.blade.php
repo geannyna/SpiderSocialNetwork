@@ -25,11 +25,11 @@
 </div>
 <br>
  
-@auth
+{{-- @auth
     
     <p class="text-center">
       <a class="btn nuevo_btn" href="{{ route ('posts.create') }}">Crear nuevo post</a></p>
-   </div>
+   
    @else
     <div class="d-flex justify-content-center mt-4 nav_letra">
         Sólo los usuarios registrados pueden crear posts.
@@ -38,7 +38,7 @@
        Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link ms-1 wall_letra" href="{{route('register')}} ">registrate.</a>
         
    
-@endauth
+@endauth --}}
 
 
 @endsection

@@ -23,51 +23,63 @@
                       <li class="nav-item">
                        <a class="nav-link mi_letra" href="{{ route ('contact')}}">Contacto</a>
                       </li>
-                      <li class="nav-item" >
+                      <li class="nav-item">
                         <a class="nav-link mi_letra" href="{{ route ('aboutus')}}">Acerca de</a>
+                      </li>
+                      <li class="nav-item">
+                        @auth
+                          <a class="nav-link mi_letra text-warning" href="{{ route ('posts.create') }}">Nuevo post</a>
+                       
+                       @else
+                        <div class="d-flex justify-content-center mt-4 nav_letra">
+                            Sólo los usuarios registrados pueden crear posts.
+                        </div>
+                        <div class="d-flex justify-content-center mt-4 nav_letra">
+                           Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link" href="{{route('register')}} ">registrate.</a>                     
+                        @endauth
                       </li>
                     </ul>
                  <!-- Right Side Of Navbar -->
                      <!-- Right Side Of Navbar -->
                      <ul class="navbar-nav ms-auto">
                       <!-- Authentication Links -->
-                      @guest
-                          @if (Route::has('login'))
-                              <li class="nav-item">
-                                  <a class="nav-link mi_letra" href="{{ route('login') }}">{{ __('Login') }}</a>
-                              </li>
-                          @endif
 
-                          @if (Route::has('register'))
-                              <li class="nav-item">
-                                  <a class="nav-link mi_letra" href="{{ route('register') }}">{{ __('Register') }}</a>
-                              </li>
-                          @endif
-                      @else
-                          <li class="nav-item dropdown">
-                              <a id="navbarDropdown" class="nav-link dropdown-toggle mi_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                  {{ Auth::user()->name }}
-                              </a>
+  @guest
+    @if (Route::has('login'))
+        <li class="nav-item">
+          <a class="nav-link mi_letra" href="{{ route('login') }}">{{ __('Login') }}</a>
+        </li>
+    @endif
 
-                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item mi_letra" href="{{ route('logout') }}"
-                                     onclick="event.preventDefault();
+    @if (Route::has('register'))
+      <li class="nav-item">
+         <a class="nav-link mi_letra" href="{{ route('register') }}">{{ __('Register') }}</a>
+      </li>
+    @endif
+        @else
+      <li class="nav-item dropdown">
+         <a id="navbarDropdown" class="nav-link dropdown-toggle mi_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          {{ Auth::user()->name }}
+         </a>
+
+   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item mi_letra" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                    document.getElementById('logout-form').submit();">
                                       {{ __('Logout') }}
-                                  </a>
+      </a>
 
-                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                      @csrf
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+      @csrf
                                      
-                                  </form>
-                              </div>
-                          </li>
-                      @endguest
-                  </ul>
+    </form>
+   </div>
+   </li>
+ @endguest
+  </ul>
 
-                  </div>
-                </div>
-              </nav> 
+    </div>
+   </div>
+  </nav> 
               
             {{--  ¿No tienes una cuenta? Regístrate
           <x-flash /> llamamos a flash.blade.php para hacer que el mensaje de comprobacion desaparezca --}}         
