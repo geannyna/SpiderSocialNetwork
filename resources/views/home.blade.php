@@ -6,7 +6,7 @@
 <div class="row d-flex">
     
 <div class="text-center">
-    <h1 class="pagetitle">@yield('pagetitle')</h1>
+    <h1 class="pagetitle mt-5">@yield('pagetitle')</h1>
 </div>
 
 <div class="d-flex justify-content-center">
@@ -19,7 +19,14 @@
                  <p>   {{ __('Ya estamos conectados!') }}</p>
                 </div>
                 @else
+        <div class="row">
+            <div class="col-md-8">
                 <img class="home_img" src="{{ asset ('/img/network.jpg')}}">
+            </div>
+            <div class="col-md-4">
+                Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link ms-1 wall_letra" href="{{route('register')}} ">registrate.</a>
+            </div>
+        </div>
              @endif{{--{{ Auth::user()->name }} --}}
             </div>
         <div class="card-body ">

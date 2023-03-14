@@ -5,9 +5,10 @@ amarillo: #F1EB7D*/
 *{
   padding:0px;
   margin:0px;
+  
 }
 .navbar_head{
-  background: linear-gradient(#3d0163,#e2abffe2);
+  background: linear-gradient(#6902a9,#f7f6f87d);
   height: 60px;
   padding-left: 40px;
   padding-right: 40px;
@@ -17,10 +18,10 @@ amarillo: #F1EB7D*/
 color: rgb(81, 1, 112);
 font-size: 1.2rem;
 font-weight: bold;
-text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px rgb(156, 3, 227);
+/* text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px rgb(156, 3, 227); */
 }
 .nav_letra:hover{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .mi_letra{
   font-size: 1.1rem;
@@ -65,14 +66,15 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
  }
 
 .contenido{
-  
-  background: transparent; 
+  background-image: url("/public/img/fondo1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #b575dc;
   padding-top: 10px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92);  
-  background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 );
-  background-size: cover;
-  
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  /* background: -webkit-linear-gradient(to left,#fde5b276, #d28df89c,#afd4ff92);  
+  background: linear-gradient(to left,#fffa9676, #d27eff9c,#8bc0fc92 ); */
   }
 .card_img{
   border-radius: 25px;
@@ -85,7 +87,7 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   margin-top: 40px;
 }
 .navbar_footer{
- background: linear-gradient(#cb20ff31,#3d0163);
+ background: linear-gradient(#f7f6f87d,#6902a9);
  height: 65px;
 
 }
@@ -94,15 +96,16 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   margin-bottom: -7px;
 }
 .mi_card{
-  background-color: transparent;
+  background-color: rgba(251, 251, 251, 0.838);
   height: auto;
-  padding-top: 28px;
+  padding-top: 33px;
   padding-left: 10px;
-  border-radius: 10%;
+  border-radius: 10px;
   border: 3px solid #f3e5e579;
   border-left:transparent;
   border-right: transparent;
   border-top: transparent;
+  box-shadow: 2px 2px 50px 5px rgb(228, 228, 228);
 }
 .nuevo_btn{
   background-color: transparent;
@@ -114,28 +117,45 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   margin-bottom: 35px;
 }
 .card_btn{
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.587);
   /* border-radius: 30%; */
-  color: #38025a;
+  color: rgb(81, 1, 112);
   font-weight: bold;
-  /* box-shadow: 14px 2px 14px 2px #8216c5 inset;
-  text-shadow: 2px 1px 5px #b575dc; */
+  font-size: 20px;
+  box-shadow: 4px 2px 6px 1px #d4d4d4;
+  text-shadow: 2px 1px 5px #4d4c4e;
+}
+.card_btn:hover{
+  font-size: 22px;
+  color: rgb(137, 1, 191);
 }
 .btn_back{
-  background-color: transparent;
-  border-radius: 30%;
-  color: #3e413f;
+  background-color:  rgba(250, 248, 248, 0.598);
+  color: #525151;
   font-weight: bold;
-  box-shadow: 14px 2px 14px 2px #6e706e inset;
-  text-shadow: 1px 1px 5px #6e706e;
+  font-size: 20px;
+  box-shadow: 4px 2px 6px 1px #d4d4d4;
+  text-shadow: 2px 1px 5px #4d4c4e;
+}
+.btn_back:hover{
+  color: #302f2f;
+  font-size: 22px;
+  background-color: rgba(172, 172, 172, 0.703);
 }
 .btn_delete{
-  background-color: transparent;
-  border-radius: 30%;
-  color: #6c190a;
+  color: #8b0808;
+  background-color: rgba(250, 248, 248, 0.598);
   font-weight: bold;
-  box-shadow: 14px 2px 14px 2px #a01b04 inset;
-  text-shadow: 1px 1px 5px #771302;
+  font-size: 20px;
+  box-shadow: 4px 2px 6px 1px #d4d4d4;
+  text-shadow: 2px 1px 5px #4d4c4e;
+  /* box-shadow: 14px 2px 14px 2px #a01b04 inset;
+  text-shadow: 1px 1px 5px #771302; */
+}
+.btn_delete:hover{
+  color: #c20303;
+  font-size: 22px;
+  background-color: rgba(252, 78, 78, 0.53);
 }
 .btn_buscar{
   color: #282828;
@@ -147,6 +167,10 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
 }
 .btn_up{
   float: right;
+}
+.btn_borrar{
+  background-color: transparent;
+  border-color: transparent;
 }
 .mi_form{
   width: 40%;
@@ -202,4 +226,9 @@ text-shadow: 1px 1px 3px rgb(180, 111, 240), 0 0 25px rgb(161, 59, 220), 0 0 5px
   font-weight:bolder;
   font-size: 40px;
 }
-
+.table-striped{
+  background-color: #fafafad4;
+}
+/* .table-striped:hover{
+  background-color: #f7f5f5ad;
+} */

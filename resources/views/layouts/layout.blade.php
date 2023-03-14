@@ -31,11 +31,10 @@
                           <a class="nav-link mi_letra text-warning" href="{{ route ('posts.create') }}">Nuevo post</a>
                        
                        @else
-                        <div class="d-flex justify-content-center mt-4 nav_letra">
+                        {{-- <div class="d-flex justify-content-center nav_letra">
                             Sólo los usuarios registrados pueden crear posts.
-                        </div>
-                        <div class="d-flex justify-content-center mt-4 nav_letra">
-                           Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link" href="{{route('register')}} ">registrate.</a>                     
+                           Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link" href="{{route('register')}} ">registrate.</a> 
+                          </div>                     --}}
                         @endauth
                       </li>
                     </ul>
@@ -85,6 +84,7 @@
           <x-flash /> llamamos a flash.blade.php para hacer que el mensaje de comprobacion desaparezca --}}         
     
            <div class="container-fluid">
+           
                {{-- @yield('pagetitle') --}}
                 @yield('content') 
               

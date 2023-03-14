@@ -41,9 +41,9 @@
         @auth
           <button type="submit" class="btn card_btn  me-4">Guardar</button> 
           @else
-          <div class="d-flex justify-content-center mt-4 nav_letra">
+          {{-- <div class="d-flex justify-content-center mt-4 nav_letra">
             Sólo los usuarios registrados pueden crear grupos.
-        </div>
+        </div> --}}
         @endauth
 
       </div>

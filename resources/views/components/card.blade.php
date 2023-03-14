@@ -52,7 +52,7 @@
         @endisset
         </div>
         @if ($link != '')
-        <p class="text-center mt-auto"><a class="btn card_btn" href="{{ $link }}">{{((isset($linkTxt))? $linkTxt : "Ver más")}}</a></p>
+        <p class="text-center mt-auto"><a class="btn card_btn mt-4" href="{{ $link }}">{{((isset($linkTxt))? $linkTxt : "Ver más")}}</a></p>
       @endif
       </div>
     </div>

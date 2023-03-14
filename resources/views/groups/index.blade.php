@@ -29,11 +29,11 @@
       <a class="btn nuevo_btn" href="{{ route ('groups.create') }}">Crear nuevo grupo</a></p>
    </div>
    @else
-    <div class="d-flex justify-content-center mt-4 nav_letra">
+    {{-- <div class="d-flex justify-content-center mt-4 nav_letra">
         Sólo los usuarios registrados pueden crear grupos.
     </div>
     <div class="d-flex justify-content-center mt-4 nav_letra">
        Entra <a class="nav-link ms-1 me-1 wall_letra" href="{{route('login')}} ">aqui </a>o<a class="nav-link ms-1 wall_letra" href="{{route('register')}} ">registrate.</a>
         
-    </div>
+    </div> --}}
 @endauth
